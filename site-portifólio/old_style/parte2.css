@@ -1,0 +1,130 @@
+.parte2 h2 {
+    text-align: center;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 24pt;
+    margin-top: 150px;
+}
+
+.projetos {
+    width: 880px;
+    margin: 0px auto;
+    margin-bottom: 200px;
+}
+
+.projetos a {
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.card {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    color: #fff;
+    width: 280px;
+    margin: 0px auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.card {
+    background-color: rgb(255, 248, 219, 0.1);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .card {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0px 2em #9842ba;
+}
+
+.card-image {
+    height: 250px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    object-position: center;
+    background-color: #fff;
+}
+
+.card ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    font-size: 8pt;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+.card li {
+    margin-right: 5px;
+    background-color: #320f5d;
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+    /* box-shadow: 0 0 1em #3f186e; */
+}
+
+.card p {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.card h3 {
+    /* margin-top: 5px; */
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+.card .card-texto {
+    padding: 5px 25px 25px 25px;
+}
+
+.card-texto ul li {
+    margin-top: 5px;
+}
+
+.card .api {
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    margin: 0px;
+    background-color: rgb(147, 255, 147);
+}
+
+
+/******************************************************/
+
+@media (max-width:900px) {
+    .parte2 h2 {
+        margin-top: 0px;
+    }
+    .projetos {
+        grid-template-columns: repeat(2, 1fr);
+        width: 580px;
+    }
+}
+
+@media (max-width:600px) {
+    .projetos {
+        grid-template-columns: 1fr;
+        width: 280px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width:300px) {
+    .projetos {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+    .card {
+        max-width: 95%;
+    }
+}
